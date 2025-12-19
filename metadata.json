@@ -1,0 +1,7 @@
+{
+  "name": "son en transito",
+  "description": "Portafolio minimalista de investigación, sonido y fotografía con estética neón verde, rosa y naranja.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

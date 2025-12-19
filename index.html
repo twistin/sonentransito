@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>son en transito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neonPink: '#ff00ff',
+                        neonYellow: '#dfff00',
+                        neonGreen: '#a3e635',
+                        neonOrange: '#ff5f1f',
+                        darkBg: '#050505',
+                        lightBg: '#ffffff',
+                        contentDark: '#0a0a0a',
+                        contentLight: '#f0f0f0'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.01em;
+        }
+        .bg-noise {
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+            background-attachment: fixed;
+            opacity: 0.03;
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+        }
+        .dark .bg-noise {
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.1;
+        }
+        /* Neogrotesque specific refinements */
+        h1, h2, h3 {
+            letter-spacing: -0.04em;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body class="bg-lightBg dark:bg-darkBg text-contentDark dark:text-white">
+    <div class="bg-noise"></div>
+    <div id="root"></div>
+</body>
+</html>
