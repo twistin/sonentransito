@@ -2,17 +2,15 @@
 title: "Cartografías Aurales"
 date: "2024-11-12"
 excerpt: "Ensayo sobre cómo las migraciones dibujan mapas invisibles en la escucha cotidiana."
-coverImage: "/assets/images/2024-11-cartografias-aurales/cover.jpg"
 tags:
   - migración
   - cartografía
   - memoria
+tools:
+  - SuperCollider
+  - Python
+  - Ableton
 series: "Archivo Errante"
-gallery:
-  - image: "/assets/images/2024-11-cartografias-aurales/trayecto-1.jpg"
-    caption: "Rutas nocturnas entre estaciones vacías."
-  - image: "/assets/images/2024-11-cartografias-aurales/trayecto-2.jpg"
-    caption: "Mapas dibujados sobre recibos de tren."
 audio:
   title: "Deriva Boreal"
   context: "Collage de voces migrantes, osciladores senoidales y sintetizadores modulados con datos de desplazamientos."

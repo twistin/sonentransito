@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AudioVisualizer from './components/AudioVisualizer';
 import Home from './views/Home';
 import Research from './views/Research';
 import Sounds from './views/Sounds';
@@ -50,6 +51,18 @@ const App: React.FC = () => {
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
+
+        {/* Corner Audio Visualizer - oscilloscope style */}
+        <AudioVisualizer
+          mode="oscilloscope"
+          position="corner"
+          width={140}
+          height={50}
+          color="#00ffc8"
+          accentColor="#ff5f1f"
+          showIdle={true}
+        />
+
         <Footer />
       </div>
     </Router>

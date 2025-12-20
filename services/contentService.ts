@@ -76,3 +76,34 @@ export const getGalleryItems = (): GalleryItem[] => galleryItems;
 export const getSoundTracks = (): AudioTrack[] => soundTracks;
 
 export const getUpcomingProjects = (): UpcomingProject[] => upcomingProjects;
+
+// New: Get galleries grouped by salida/post
+export interface SalidaGallery {
+  slug: string;
+  title: string;
+  date: string;
+  series: string;
+  excerpt: string;
+  ambientAudio?: string;
+  images: GalleryItem[];
+}
+
+export const getGalleriesBySalida = (): SalidaGallery[] => {
+  return posts
+    .filter((post) => (post.frontmatter.gallery?.length ?? 0) > 0)
+    .map((post) => ({
+      slug: post.slug,
+      title: post.frontmatter.title,
+      date: post.frontmatter.date,
+      series: post.frontmatter.series ?? 'Sin serie',
+      excerpt: post.frontmatter.excerpt,
+      ambientAudio: post.frontmatter.ambientAudio,
+      images: (post.frontmatter.gallery ?? []).map((block, index) => ({
+        id: `${post.slug}-gallery-${index}`,
+        image: block.image,
+        caption: block.caption,
+        series: post.frontmatter.series ?? post.frontmatter.title,
+      })),
+    }))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+};

@@ -52,9 +52,11 @@ export interface PostFrontMatter {
   title: string;
   date: string;
   excerpt: string;
-  coverImage: string;
+  coverImage?: string;
   tags?: string[];
+  tools?: string[];  // Technical tools/stack used: SuperCollider, React, MaxMSP, etc.
   series?: string;
+  ambientAudio?: string;  // URL to ambient soundscape audio for this post/salida
   gallery?: PostGalleryBlock[];
   audio?: PostAudioBlock | PostAudioBlock[];
 }

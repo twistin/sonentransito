@@ -2,17 +2,16 @@
 title: "Tiempo Kairológico"
 date: "2025-01-05"
 excerpt: "Deriva sonora entre mareas, código y memoria oral grabada en Galicia."
-coverImage: "/assets/images/2025-01-tiempo-kairologico/cover.jpg"
 tags:
   - kairos
   - geopoética
   - field-recording
+tools:
+  - TidalCycles
+  - SuperCollider
+  - Binaural
+  - Field Recording
 series: "Etnografías Resonantes"
-gallery:
-  - image: "/assets/images/2025-01-tiempo-kairologico/corte-a.jpg"
-    caption: "Fragmentos de espuma sintetizados con granularidad caótica."
-  - image: "/assets/images/2025-01-tiempo-kairologico/corte-b.jpg"
-    caption: "Antenas improvisadas en el muelle de Cangas."
 audio:
   - title: "Kairos Drift"
     context: "Texturas generativas construidas con grabaciones binaurales y TidalCycles."
