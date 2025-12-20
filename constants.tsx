@@ -1,4 +1,4 @@
-import { ResearchPaper, Soundscape, Photo, Profile } from './types';
+import { ResearchPaper, Profile } from './types';
 
 export const PROFILE_DATA: Profile = {
   name: "Silvino Díaz Carreras",
@@ -53,29 +53,4 @@ export const RESEARCH_DATA: ResearchPaper[] = [
     date: '2022',
     category: 'Journal Article'
   }
-];
-
-export const SOUNDSCAPES: Soundscape[] = [
-  {
-    id: 's1',
-    title: 'Metrópolis Líquida',
-    description: 'Grabaciones de campo procesadas de las alcantarillas de Berlín.',
-    duration: '12:45',
-    type: 'soundscape'
-  },
-  {
-    id: 's2',
-    title: 'Ecos del Silencio (Piano & Granular)',
-    description: 'Composición para piano preparado y síntesis granular.',
-    duration: '06:12',
-    type: 'music'
-  }
-];
-
-export const PHOTOS: Photo[] = [
-  { id: 'p1', url: 'https://picsum.photos/800/600?random=1', caption: 'Luz y Sombra' },
-  { id: 'p2', url: 'https://picsum.photos/600/800?random=2', caption: 'Geometría Urbana' },
-  { id: 'p3', url: 'https://picsum.photos/800/1200?random=3', caption: 'Textura del Olvido' },
-  { id: 'p4', url: 'https://picsum.photos/1200/800?random=4', caption: 'Reflejos' },
-  { id: 'p5', url: 'https://picsum.photos/1000/1000?random=5', caption: 'Minimalismo Natural' },
 ];

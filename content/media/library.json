@@ -1,0 +1,57 @@
+{
+  "gallery": [
+    {
+      "id": "kairos-01",
+      "image": "/assets/images/2025-01-tiempo-kairologico/cover.jpg",
+      "caption": "Topografías líquidas capturadas en la ría de Vigo.",
+      "series": "Etnografías Resonantes"
+    },
+    {
+      "id": "aural-02",
+      "image": "/assets/images/2024-11-cartografias-aurales/trayecto-1.jpg",
+      "caption": "Tránsitos ferroviarios intervenidos con luz cálida.",
+      "series": "Archivo Errante"
+    },
+    {
+      "id": "laboratorio-01",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      "caption": "Estudio portátil montado sobre una mesa de madera recuperada.",
+      "series": "Notas de Taller"
+    }
+  ],
+  "soundTracks": [
+    {
+      "id": "soundcloud-e1",
+      "title": "E1",
+      "context": "Primer boceto compartido desde Twistin_25; exploración granular con texturas marinas.",
+      "url": "https://soundcloud.com/twistin_25/e1",
+      "platform": "soundcloud",
+      "type": "soundscape"
+    },
+    {
+      "id": "soundcloud-qian",
+      "title": "Qian",
+      "context": "Secuencia inspirada en el I Ching; ritmos iterativos y drones cálidos.",
+      "url": "https://soundcloud.com/twistin_25/qian",
+      "platform": "soundcloud",
+      "type": "music"
+    }
+  ],
+  "upcomingProjects": [
+    {
+      "title": "Paisajes de Costa da Vela",
+      "focus": "Capturas binaurales y texturas generativas del litoral de Hío.",
+      "status": "Grabaciones en edición"
+    },
+    {
+      "title": "Algoritmos para aula",
+      "focus": "Piezas creadas junto a estudiantes para explorar música algorítmica.",
+      "status": "Diseño de repertorio"
+    },
+    {
+      "title": "Memorias migrantes",
+      "focus": "Testimonios y drones sonoros inspirados en la investigación doctoral.",
+      "status": "Guion documental"
+    }
+  ]
+}
