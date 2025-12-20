@@ -15,17 +15,45 @@ interface SonicOptions {
 
 // Singleton AudioContext to avoid creating multiple instances
 let audioContext: AudioContext | null = null;
+let audioEnabled = false;
 
-const getAudioContext = (): AudioContext => {
-    if (!audioContext) {
-        audioContext = new AudioContext();
+const getAudioContext = (): AudioContext | null => {
+    // Don't try to create AudioContext until user has interacted
+    if (!audioEnabled) {
+        return null;
     }
+
+    if (!audioContext) {
+        try {
+            audioContext = new AudioContext();
+        } catch {
+            return null;
+        }
+    }
+
     // Resume if suspended (browsers require user interaction first)
     if (audioContext.state === 'suspended') {
-        audioContext.resume();
+        audioContext.resume().catch(() => { });
     }
+
     return audioContext;
 };
+
+// Enable audio after first user interaction
+const enableAudio = () => {
+    if (!audioEnabled) {
+        audioEnabled = true;
+        // Remove listeners after enabling
+        document.removeEventListener('click', enableAudio);
+        document.removeEventListener('keydown', enableAudio);
+    }
+};
+
+// Set up listeners to enable audio on first interaction
+if (typeof document !== 'undefined') {
+    document.addEventListener('click', enableAudio, { once: true });
+    document.addEventListener('keydown', enableAudio, { once: true });
+}
 
 /**
  * Generates a quick blip sound - a short sine tone with fast envelope
@@ -164,6 +192,9 @@ export const triggerSound = (options: SonicOptions = {}) => {
     try {
         const ctx = getAudioContext();
 
+        // Silently skip if audio not ready yet
+        if (!ctx) return;
+
         switch (type) {
             case 'blip':
                 playBlip(ctx, volume, pitch);
@@ -178,9 +209,8 @@ export const triggerSound = (options: SonicOptions = {}) => {
                 playSweep(ctx, volume, pitch);
                 break;
         }
-    } catch (error) {
+    } catch {
         // Silently fail if Web Audio API is not supported
-        console.warn('Web Audio API not available:', error);
     }
 };
 
