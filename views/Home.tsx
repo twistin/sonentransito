@@ -19,7 +19,14 @@ const Home: React.FC = () => {
         <div className="absolute top-[40%] left-[20%] w-[30vw] h-[30vw] bg-neonOrange/10 dark:bg-neonOrange/5 blur-[100px] rounded-full transition-all"></div>
 
         <div className="max-w-6xl w-full relative z-10 text-center">
-          <h1 className="text-6xl md:text-[11rem] font-extrabold leading-[0.85] tracking-tighter mb-12 uppercase">
+          {/* EXPERIMENTAL: Background image behind title - remove this div to revert */}
+          <div
+            className="absolute inset-0 -z-10 opacity-[0.35] dark:opacity-20 bg-center bg-contain bg-no-repeat pointer-events-none"
+            style={{ backgroundImage: 'url(/assets/images/hero-bg.png)' }}
+            aria-hidden="true"
+          />
+
+          <h1 className="text-6xl md:text-[11rem] font-extrabold leading-[0.85] tracking-tighter mb-12 uppercase relative">
             <span className="text-contentDark dark:text-white transition-colors">son en</span> <br />
             <span className="text-neonOrange dark:text-neonYellow">transito</span>
           </h1>
