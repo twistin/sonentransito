@@ -4,11 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Son en Transito - Portafolio de investigación doctoral y arte sonoro. Explorando la fenomenología del sonido, migración y creación algorítmica.">
-    <title>son en transito</title>
+
+    <!-- SEO Basic -->
+    <title>Son en Tránsito | Silvino Díaz Carreras - Arte Sonoro & Investigación</title>
+    <meta name="description"
+        content="Portafolio de Silvino Díaz Carreras. Investigación doctoral en música e identidad, arte sonoro, live coding, paisajes sonoros y composición algorítmica desde Galicia.">
+    <meta name="keywords"
+        content="arte sonoro, live coding, paisajes sonoros, field recording, música algorítmica, SuperCollider, etnomusicología, investigación musical, Galicia, Vigo, soundscape">
+    <meta name="author" content="Silvino Díaz Carreras">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sdcarreras.netlify.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sdcarreras.netlify.app/">
+    <meta property="og:title" content="Son en Tránsito | Silvino Díaz Carreras">
+    <meta property="og:description"
+        content="Arte sonoro, live coding, paisajes sonoros y composición algorítmica. Investigación doctoral en música e identidad desde Galicia.">
+    <meta property="og:image" content="https://sdcarreras.netlify.app/assets/images/og-image.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Son en Tránsito">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sdcarreras.netlify.app/">
+    <meta name="twitter:title" content="Son en Tránsito | Silvino Díaz Carreras">
+    <meta name="twitter:description"
+        content="Arte sonoro, live coding, paisajes sonoros y composición algorítmica desde Galicia.">
+    <meta name="twitter:image" content="https://sdcarreras.netlify.app/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#ff5f1f">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Silvino Díaz Carreras",
+        "url": "https://sdcarreras.netlify.app",
+        "image": "https://sdcarreras.netlify.app/assets/images/profile.jpg",
+        "jobTitle": "Musicólogo, Profesor Superior de Guitarra, Desarrollador",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Conservatorio Profesional de Música Reveriano Soutullo"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "UNED"
+        },
+        "sameAs": [
+            "https://github.com/twistin",
+            "https://www.instagram.com/silvinodiazcarreras/",
+            "https://soundcloud.com/sd-carr",
+            "https://www.academia.edu/",
+            "https://vimeo.com/user7438711",
+            "https://linktr.ee/silvinodiazcarreras"
+        ],
+        "knowsAbout": ["Live Coding", "SuperCollider", "Etnomusicología", "Field Recording", "Composición Algorítmica", "Arte Sonoro"]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
@@ -23,15 +90,15 @@
                         neonYellow: '#dfff00',
                         neonGreen: '#a3e635',
                         neonOrange: '#ff5f1f',
-                        
+
                         // Backgrounds
                         darkBg: '#0a0a0a',
                         lightBg: '#fafafa',
-                        
+
                         // Text colors - WCAG 2.1 AA compliant (4.5:1 contrast ratio minimum)
                         contentDark: '#0a0a0a',
                         contentLight: '#e8e8e8',
-                        
+
                         // Accessible grays with proper contrast
                         gray: {
                             50: '#fafafa',
@@ -78,7 +145,7 @@
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             transition: background-color 0.5s ease, color 0.5s ease;
             font-family: 'Inter', system-ui, sans-serif;
@@ -87,23 +154,27 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        
+
         /* Improved text contrast for dark mode */
         .dark body {
-            color: #e8e8e8; /* WCAG AA compliant on #0a0a0a */
+            color: #e8e8e8;
+            /* WCAG AA compliant on #0a0a0a */
         }
-        
+
         /* Readable body text */
-        p, li, td, th {
+        p,
+        li,
+        td,
+        th {
             line-height: 1.7;
         }
-        
+
         /* Focus states for accessibility */
         *:focus-visible {
             outline: 2px solid #ff5f1f;
             outline-offset: 2px;
         }
-        
+
         /* Skip link for keyboard navigation */
         .skip-link {
             position: absolute;
@@ -115,20 +186,22 @@
             z-index: 100;
             font-weight: bold;
         }
-        
+
         .skip-link:focus {
             top: 0;
         }
-        
+
         /* Improved contrast for secondary text */
         .text-muted {
-            color: #71717a; /* 5.1:1 on white */
+            color: #71717a;
+            /* 5.1:1 on white */
         }
-        
+
         .dark .text-muted {
-            color: #a1a1aa; /* 4.6:1 on dark */
+            color: #a1a1aa;
+            /* 4.6:1 on dark */
         }
-        
+
         /* Background noise texture */
         .bg-noise {
             background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
@@ -146,47 +219,50 @@
         }
 
         /* Neogrotesque typography */
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             letter-spacing: -0.04em;
             line-height: 1.2;
         }
-        
+
         /* Responsive single column for mobile */
         @media (max-width: 767px) {
             .grid {
                 grid-template-columns: 1fr !important;
             }
-            
+
             .md\:grid-cols-2,
             .md\:grid-cols-3,
             .lg\:grid-cols-2,
             .lg\:grid-cols-3 {
                 grid-template-columns: 1fr;
             }
-            
+
             /* Stack flex containers on mobile */
             .md\:flex-row {
                 flex-direction: column;
             }
-            
+
             /* Reduce padding on mobile */
             .px-8 {
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
-            
+
             /* Readable font sizes on mobile */
             h1 {
                 font-size: 2.5rem !important;
             }
-            
+
             h2 {
                 font-size: 1.75rem !important;
             }
         }
-        
+
         /* Reduced motion preference */
         @media (prefers-reduced-motion: reduce) {
+
             *,
             *::before,
             *::after {
@@ -196,14 +272,14 @@
                 scroll-behavior: auto !important;
             }
         }
-        
+
         /* High contrast mode support */
         @media (prefers-contrast: high) {
             body {
                 --neon-orange: #ff7f3f;
                 --neon-pink: #ff4fff;
             }
-            
+
             .border-black\/5,
             .border-white\/5 {
                 border-color: currentColor !important;
@@ -217,7 +293,7 @@
 <body class="bg-lightBg dark:bg-darkBg text-contentDark dark:text-contentLight">
     <!-- Skip link for keyboard accessibility -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-    
+
     <div class="bg-noise" aria-hidden="true"></div>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>

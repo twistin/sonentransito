@@ -9,9 +9,14 @@ import Sounds from './views/Sounds';
 import Gallery from './views/Gallery';
 import About from './views/About';
 import MapView from './views/MapView';
+import usePageTitle from './hooks/usePageTitle';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+
+  // Update page title based on route
+  usePageTitle(pathname);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
