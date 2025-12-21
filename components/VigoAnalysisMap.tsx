@@ -115,6 +115,29 @@ const FlyToLocation: React.FC<{ position: [number, number] | null }> = ({ positi
     return null;
 };
 
+// Map Resizer - fixes the half-loaded tiles issue
+const MapResizer: React.FC = () => {
+    const map = useMap();
+
+    useEffect(() => {
+        // Force map to recalculate size after render
+        const timer = setTimeout(() => {
+            map.invalidateSize();
+        }, 100);
+
+        // Also handle window resize
+        const handleResize = () => map.invalidateSize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [map]);
+
+    return null;
+};
+
 // Analysis Panel Component
 interface AnalysisPanelProps {
     node: RecordingNode | null;
@@ -296,6 +319,7 @@ const VigoAnalysisMap: React.FC = () => {
                     url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
                 />
 
+                <MapResizer />
                 <FlyToLocation position={flyToPosition} />
 
                 {/* Master Node - Vigo */}
