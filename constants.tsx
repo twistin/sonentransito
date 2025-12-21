@@ -41,16 +41,30 @@ export const PROFILE_DATA: Profile = {
 export const RESEARCH_DATA: ResearchPaper[] = [
   {
     id: '1',
-    title: 'Intersticialidad Sonora: Fenomenología de la Escucha en Espacios Liminales',
-    abstract: 'Esta investigación doctoral explora cómo los sonidos en los límites de la percepción consciente moldean nuestra experiencia del espacio urbano y la memoria colectiva.',
-    date: '2023',
-    category: 'Doctoral Thesis'
+    title: 'Proyecto Educativo ABP Etnomusicológico para Conservatorios',
+    abstract: 'Propuesta de proyecto educativo basado en el Aprendizaje Basado en Proyectos (ABP) aplicado a la etnomusicología en el contexto de los conservatorios de música.',
+    date: '2025',
+    category: 'Educational Research',
+    url: 'https://www.academia.edu/144692894/Proyecto_Educativo_ABP_Etnomusicologico_para_conservatorios',
+    tags: ['Etnomusicología', 'ABP', 'Educación Musical', 'Conservatorios']
   },
   {
     id: '2',
-    title: 'Algoritmos y Estética: Hacia una Epistemología de lo Incalculable',
-    abstract: 'Un análisis crítico sobre el papel de la IA en la creación artística y su impacto en la definición de originalidad en la era del post-humanismo.',
-    date: '2022',
-    category: 'Journal Article'
+    title: 'SuperCollider: Un Análisis de la Computación Sonora en el Live Coding, la Composición Electroacústica y la Pedagogía Académica',
+    abstract: 'Análisis profundo sobre el uso de SuperCollider como herramienta para la computación sonora, explorando sus aplicaciones en live coding, composición electroacústica y su integración en la pedagogía musical académica.',
+    date: '2025',
+    category: 'Journal Article',
+    url: 'https://www.academia.edu/145039636/SuperCollider_Un_An%C3%A1lisis_de_la_Computaci%C3%B3n_Sonora_en_el_Live_Coding_la_Composici%C3%B3n_Electroac%C3%BAstica_y_la_Pedagog%C3%ADa_Acad%C3%A9mica',
+    tags: ['SuperCollider', 'Live Coding', 'Arte Sonoro', 'Composición Electroacústica']
+  },
+  {
+    id: '3',
+    title: 'La Escena Musical como Crisol Dinámico: Articulaciones, Luchas y Transformaciones en la Música Popular',
+    abstract: 'Estudio sobre las escenas musicales como espacios dinámicos donde se articulan identidades culturales, luchas sociales y transformaciones en el contexto de la música popular y la globalización.',
+    date: '2025',
+    category: 'Cultural Studies',
+    url: 'https://www.academia.edu/129268840/La_Escena_Musical_como_Crisol_Din%C3%A1mico_Articulaciones_Luchas_y_Transformaciones_en_la_M%C3%BAsica_Popular',
+    tags: ['Cultural Studies', 'Globalización', 'Identidad Cultural', 'Escenas Musicales']
   }
 ];
+

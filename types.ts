@@ -5,6 +5,8 @@ export interface ResearchPaper {
   abstract: string;
   date: string;
   category: string;
+  url?: string;
+  tags?: string[];
 }
 
 export type AudioPlatform = 'soundcloud' | 'bandcamp' | 'local' | 'other';

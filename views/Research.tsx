@@ -32,9 +32,22 @@ const Research: React.FC = () => {
                 <div className="text-[10px] font-black tracking-[0.3em] text-neonPink uppercase mb-2">
                   {paper.date}
                 </div>
-                <div className="text-[10px] font-bold tracking-[0.2em] text-contentDark/30 dark:text-white/30 uppercase">
+                <div className="text-[10px] font-bold tracking-[0.2em] text-contentDark/30 dark:text-white/30 uppercase mb-4">
                   {paper.category}
                 </div>
+                {/* Tags */}
+                {paper.tags && paper.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {paper.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[8px] font-bold tracking-[0.15em] uppercase px-2 py-1 bg-neonGreen/10 text-neonGreen border border-neonGreen/20"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </aside>
               <div>
                 <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-contentDark dark:text-white group-hover:text-neonOrange transition-colors mb-6">
@@ -43,24 +56,37 @@ const Research: React.FC = () => {
                 <p className="text-contentDark/60 dark:text-white/60 leading-relaxed text-lg font-light mb-10 max-w-3xl">
                   {paper.abstract}
                 </p>
-                
-                <div className="space-y-6">
-                  <button 
+
+                <div className="flex flex-wrap gap-4 items-center mb-6">
+                  {/* Academia.edu link */}
+                  {paper.url && (
+                    <a
+                      href={paper.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-contentDark dark:bg-white text-white dark:text-black font-black uppercase tracking-[0.15em] text-[10px] hover:bg-neonOrange dark:hover:bg-neonOrange dark:hover:text-white transition-all transform hover:-translate-y-1"
+                    >
+                      <span>Ver en Academia</span>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
+
+                  <button
                     onClick={() => handleInterpret(paper.id, paper.abstract)}
                     disabled={loading[paper.id]}
-                    className="text-[10px] font-black tracking-[0.3em] text-contentDark dark:text-white border-b-2 border-neonOrange pb-1 hover:text-neonPink hover:border-neonPink transition-all disabled:opacity-30 uppercase"
+                    className="text-[10px] font-black tracking-[0.3em] text-contentDark dark:text-white border-b-2 border-neonPink pb-1 hover:text-neonPink transition-all disabled:opacity-30 uppercase"
                   >
                     {loading[paper.id] ? 'Decodificando...' : 'Interpretación Poética IA'}
                   </button>
-
-                  {interpretations[paper.id] && (
-                    <div className="p-8 bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
-                      <p className="text-contentDark/80 dark:text-white/80 text-sm leading-loose tracking-wide italic transition-colors">
-                        {interpretations[paper.id]}
-                      </p>
-                    </div>
-                  )}
                 </div>
+
+                {interpretations[paper.id] && (
+                  <div className="p-8 bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
+                    <p className="text-contentDark/80 dark:text-white/80 text-sm leading-loose tracking-wide italic transition-colors">
+                      {interpretations[paper.id]}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </article>
@@ -71,3 +97,4 @@ const Research: React.FC = () => {
 };
 
 export default Research;
+
