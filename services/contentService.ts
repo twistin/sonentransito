@@ -107,3 +107,38 @@ export const getGalleriesBySalida = (): SalidaGallery[] => {
     }))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
+
+// Soundscapes: grabaciones de campo de las salidas
+export interface Soundscape {
+  id: string;
+  title: string;
+  date: string;
+  location: string;
+  excerpt: string;
+  audioUrl: string;
+  coverImage?: string;
+  series?: string;
+  slug: string;
+}
+
+export const getSoundscapesFromPosts = (): Soundscape[] => {
+  return posts
+    .filter((post) => post.frontmatter.ambientAudio)
+    .map((post) => ({
+      id: `soundscape-${post.slug}`,
+      title: post.frontmatter.title,
+      date: post.frontmatter.date,
+      location: post.frontmatter.series ?? 'Paisaje Sonoro',
+      excerpt: post.frontmatter.excerpt,
+      audioUrl: post.frontmatter.ambientAudio!,
+      coverImage: post.frontmatter.coverImage,
+      series: post.frontmatter.series,
+      slug: post.slug,
+    }))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+};
+
+// SoundCloud tracks only
+export const getSoundCloudTracks = (): AudioTrack[] => {
+  return soundTracks.filter((track) => track.platform === 'soundcloud');
+};
