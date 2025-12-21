@@ -8,6 +8,7 @@ import Research from './views/Research';
 import Sounds from './views/Sounds';
 import Gallery from './views/Gallery';
 import About from './views/About';
+import MapView from './views/MapView';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -49,6 +50,7 @@ const App: React.FC = () => {
             <Route path="/research" element={<Research />} />
             <Route path="/sounds" element={<Sounds />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/map" element={<MapView />} />
           </Routes>
         </main>
 

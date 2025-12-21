@@ -26,6 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
     { path: '/research', label: t('nav.research') },
     { path: '/sounds', label: t('nav.sounds') },
     { path: '/gallery', label: t('nav.gallery') },
+    { path: '/map', label: t('nav.map') },
   ];
 
   const handleThemeToggle = () => {
@@ -86,8 +87,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               key={lang.code}
               onClick={() => changeLanguage(lang.code)}
               className={`text-[9px] font-bold tracking-wider px-2 py-1 rounded-full transition-all ${i18n.language === lang.code
-                  ? 'bg-neonOrange text-white'
-                  : 'text-contentDark/40 dark:text-white/40 hover:text-contentDark dark:hover:text-white'
+                ? 'bg-neonOrange text-white'
+                : 'text-contentDark/40 dark:text-white/40 hover:text-contentDark dark:hover:text-white'
                 }`}
             >
               {lang.label}
