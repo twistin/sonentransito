@@ -3,6 +3,7 @@ import React from 'react';
 
 // Social media links
 const socialLinks = [
+  { name: 'GitHub', url: 'https://github.com/twistin', color: 'hover:text-neonGreen' },
   { name: 'Instagram', url: 'https://www.instagram.com/silvinodiazcarreras/', color: 'hover:text-neonPink' },
   { name: 'SoundCloud', url: 'https://soundcloud.com/sd-carr', color: 'hover:text-neonOrange' },
   { name: 'Bandcamp', url: 'https://twistin.bandcamp.com/album/emao-sessions', color: 'hover:text-neonGreen' },
