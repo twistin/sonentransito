@@ -8,6 +8,7 @@ const socialLinks = [
   { name: 'Bandcamp', url: 'https://twistin.bandcamp.com/album/emao-sessions', color: 'hover:text-neonGreen' },
   { name: 'Vimeo', url: 'https://vimeo.com/user7438711', color: 'hover:text-neonPink' },
   { name: 'Linktree', url: 'https://linktr.ee/silvinodiazcarreras', color: 'hover:text-neonGreen' },
+  { name: 'Mail', url: 'mailto:sarerac@gmail.com', color: 'hover:text-neonOrange' },
 ];
 
 const Footer: React.FC = () => {
