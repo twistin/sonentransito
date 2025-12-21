@@ -1,11 +1,11 @@
 # robots.txt for Son en Tránsito
-# https://sdcarreras.netlify.app
+# https://sonentransito.netlify.app
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://sdcarreras.netlify.app/sitemap.xml
+Sitemap: https://sonentransito.netlify.app/sitemap.xml
 
 # Disallow admin/private paths (none currently)
 # Disallow: /admin/
