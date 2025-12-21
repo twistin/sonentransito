@@ -1,0 +1,72 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "research": "Research",
+        "sounds": "Sounds",
+        "gallery": "Gallery"
+    },
+    "home": {
+        "subtitle": "Sound Laboratory",
+        "title": "Sound in Transit",
+        "description": "Sonic explorations between algorithm and organic. Soundscapes, live coding and experimental music from Galicia.",
+        "cta": {
+            "listen": "Listen to soundscape",
+            "explore": "Explore"
+        },
+        "sections": {
+            "soundscapes": "Soundscapes",
+            "soundscapesDesc": "Binaural captures from places in transit",
+            "research": "Research",
+            "researchDesc": "Academic articles and reflections",
+            "sounds": "Sounds",
+            "soundsDesc": "Productions and sonic experiments"
+        }
+    },
+    "about": {
+        "subtitle": "Ethos & Profile",
+        "location": "Ponteareas, Pontevedra",
+        "focusTitle": "Focus Areas",
+        "trajectoryTitle": "Background",
+        "projectsTitle": "Web Projects",
+        "collaborate": "Collaborate?",
+        "manifesto": "Generate Ephemeral Manifesto",
+        "loading": "Syncing..."
+    },
+    "research": {
+        "subtitle": "Academic Research",
+        "title": "Logos",
+        "viewAcademia": "View on Academia",
+        "poeticInterpretation": "AI Poetic Interpretation",
+        "decoding": "Decoding..."
+    },
+    "sounds": {
+        "subtitle": "Sound Laboratory",
+        "title": "Sounds",
+        "description": "Explore the sound archive: from field-recorded soundscapes to productions published on SoundCloud.",
+        "visitSoundcloud": "Visit SoundCloud",
+        "tabs": {
+            "soundscapes": "Soundscapes",
+            "soundcloud": "SoundCloud"
+        },
+        "noSoundscapes": "No soundscapes published yet.",
+        "noSoundcloud": "No SoundCloud tracks yet.",
+        "upcoming": "Coming Soon"
+    },
+    "gallery": {
+        "subtitle": "Visual Archive",
+        "title": "Gallery",
+        "filter": {
+            "all": "All",
+            "bySeries": "By series"
+        }
+    },
+    "footer": {
+        "copyright": "SOUND IN TRANSIT | SOUND • SPACE • MATTER"
+    },
+    "common": {
+        "fieldRecording": "Field Recording",
+        "readMore": "Read more",
+        "close": "Close"
+    }
+}

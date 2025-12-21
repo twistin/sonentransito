@@ -1,0 +1,72 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "research": "Investigación",
+        "sounds": "Sonidos",
+        "gallery": "Galería"
+    },
+    "home": {
+        "subtitle": "Laboratorio sonoro",
+        "title": "Son en Tránsito",
+        "description": "Exploraciones sonoras entre el algoritmo y lo orgánico. Paisajes sonoros, live coding y música experimental desde Galicia.",
+        "cta": {
+            "listen": "Escuchar paisaje",
+            "explore": "Explorar"
+        },
+        "sections": {
+            "soundscapes": "Paisajes Sonoros",
+            "soundscapesDesc": "Capturas binaurales de lugares en tránsito",
+            "research": "Investigación",
+            "researchDesc": "Artículos y reflexiones académicas",
+            "sounds": "Sonidos",
+            "soundsDesc": "Producciones y experimentos sonoros"
+        }
+    },
+    "about": {
+        "subtitle": "Ethos & Perfil",
+        "location": "Ponteareas, Pontevedra",
+        "focusTitle": "Áreas de Enfoque",
+        "trajectoryTitle": "Trayectoria",
+        "projectsTitle": "Proyectos Web",
+        "collaborate": "¿Colaboramos?",
+        "manifesto": "Generar Manifiesto Efímero",
+        "loading": "Sincronizando..."
+    },
+    "research": {
+        "subtitle": "Investigación Académica",
+        "title": "Logos",
+        "viewAcademia": "Ver en Academia",
+        "poeticInterpretation": "Interpretación Poética IA",
+        "decoding": "Decodificando..."
+    },
+    "sounds": {
+        "subtitle": "Laboratorio sonoro",
+        "title": "Sonidos",
+        "description": "Explora el archivo sonoro: desde paisajes sonoros capturados en campo hasta producciones publicadas en SoundCloud.",
+        "visitSoundcloud": "Visitar SoundCloud",
+        "tabs": {
+            "soundscapes": "Paisajes Sonoros",
+            "soundcloud": "SoundCloud"
+        },
+        "noSoundscapes": "Aún no hay paisajes sonoros publicados.",
+        "noSoundcloud": "Aún no hay tracks de SoundCloud.",
+        "upcoming": "Próximamente"
+    },
+    "gallery": {
+        "subtitle": "Archivo Visual",
+        "title": "Galería",
+        "filter": {
+            "all": "Todas",
+            "bySeries": "Por serie"
+        }
+    },
+    "footer": {
+        "copyright": "SON EN TRANSITO | SONIDO • ESPACIO • MATERIA"
+    },
+    "common": {
+        "fieldRecording": "Grabación de campo",
+        "readMore": "Leer más",
+        "close": "Cerrar"
+    }
+}

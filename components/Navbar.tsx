@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SonicPresets, triggerSound } from '../hooks/useSonicInteraction';
 import AudioVisualizer from './AudioVisualizer';
 
@@ -9,19 +10,32 @@ interface NavbarProps {
   toggleTheme: () => void;
 }
 
+const languages = [
+  { code: 'gl', label: 'GL' },
+  { code: 'es', label: 'ES' },
+  { code: 'en', label: 'EN' },
+];
+
 const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
   const links = [
-    { path: '/', label: 'INICIO' },
-    { path: '/about', label: 'PERFIL' },
-    { path: '/research', label: 'RESEARCH' },
-    { path: '/sounds', label: 'SOUNDS' },
-    { path: '/gallery', label: 'VISION' },
+    { path: '/', label: t('nav.home') },
+    { path: '/about', label: t('nav.about') },
+    { path: '/research', label: t('nav.research') },
+    { path: '/sounds', label: t('nav.sounds') },
+    { path: '/gallery', label: t('nav.gallery') },
   ];
 
   const handleThemeToggle = () => {
     triggerSound({ type: 'glitch', volume: 0.3, pitch: theme === 'light' ? 0.8 : 1.2 });
     toggleTheme();
+  };
+
+  const changeLanguage = (lang: string) => {
+    triggerSound({ type: 'blip', volume: 0.2, pitch: 1.3 });
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -49,13 +63,14 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
         </div>
       </div>
 
-      <div className="flex items-center gap-10">
-        <div className="hidden md:flex gap-10">
+      <div className="flex items-center gap-6 md:gap-10">
+        {/* Navigation Links */}
+        <div className="hidden md:flex gap-8">
           {links.map((link, index) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-[10px] font-black tracking-[0.3em] transition-all duration-300 hover:text-neonOrange ${location.pathname === link.path ? 'text-neonPink' : 'text-contentDark/60 dark:text-white/40'
+              className={`text-[10px] font-black tracking-[0.3em] uppercase transition-all duration-300 hover:text-neonOrange ${location.pathname === link.path ? 'text-neonPink' : 'text-contentDark/60 dark:text-white/40'
                 }`}
               onMouseEnter={() => triggerSound({ type: 'blip', volume: 0.25, pitch: 1 + (index * 0.1) })}
             >
@@ -64,6 +79,23 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           ))}
         </div>
 
+        {/* Language Selector */}
+        <div className="flex items-center gap-1 border border-black/10 dark:border-white/10 rounded-full px-1">
+          {languages.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => changeLanguage(lang.code)}
+              className={`text-[9px] font-bold tracking-wider px-2 py-1 rounded-full transition-all ${i18n.language === lang.code
+                  ? 'bg-neonOrange text-white'
+                  : 'text-contentDark/40 dark:text-white/40 hover:text-contentDark dark:hover:text-white'
+                }`}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Theme Toggle */}
         <button
           onClick={handleThemeToggle}
           className="p-2 rounded-full border border-black/10 dark:border-white/10 hover:border-neonOrange transition-all"
@@ -82,3 +114,4 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 };
 
 export default Navbar;
+

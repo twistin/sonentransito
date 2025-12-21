@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getSoundCloudTracks, getSoundscapesFromPosts, getUpcomingProjects } from '../services/contentService';
 
 type TabType = 'soundscapes' | 'soundcloud';
@@ -8,23 +9,25 @@ const soundcloudTracks = getSoundCloudTracks();
 const soundscapes = getSoundscapesFromPosts();
 const upcomingProjects = getUpcomingProjects();
 
-const formatDate = (dateStr: string) => {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
-};
-
 const Sounds: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('soundscapes');
+  const { t, i18n } = useTranslation();
+
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    const locale = i18n.language === 'en' ? 'en-US' : i18n.language === 'gl' ? 'gl-ES' : 'es-ES';
+    return date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+  };
 
   return (
     <div className="min-h-screen pt-40 pb-32 px-8 max-w-7xl mx-auto transition-colors duration-500">
       {/* Header */}
       <section className="mb-16 flex flex-col md:flex-row justify-between items-end gap-8 border-b border-black/5 dark:border-white/5 pb-16">
         <div className="max-w-3xl">
-          <p className="text-neonOrange text-[10px] font-black tracking-[0.5em] uppercase mb-4">Laboratorio sonoro</p>
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase mb-8 text-contentDark dark:text-white">Sounds</h1>
+          <p className="text-neonOrange text-[10px] font-black tracking-[0.5em] uppercase mb-4">{t('sounds.subtitle')}</p>
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase mb-8 text-contentDark dark:text-white">{t('sounds.title')}</h1>
           <p className="text-lg md:text-xl font-light leading-relaxed text-contentDark/60 dark:text-white/60 tracking-tight">
-            Explora el archivo sonoro: desde <span className="text-neonGreen font-medium">paisajes sonoros</span> capturados en campo hasta producciones publicadas en <span className="text-neonPink font-medium">SoundCloud</span>.
+            {t('sounds.description')}
           </p>
         </div>
         <a
@@ -33,7 +36,7 @@ const Sounds: React.FC = () => {
           rel="noreferrer noopener"
           className="group flex items-center gap-3 px-8 py-4 bg-contentDark dark:bg-white text-white dark:text-black font-black uppercase tracking-[0.2em] text-[11px] hover:bg-neonOrange dark:hover:bg-neonOrange dark:hover:text-white transition-all transform hover:-translate-y-1 shadow-lg shadow-black/5"
         >
-          <span>Visitar SoundCloud</span>
+          <span>{t('sounds.visitSoundcloud')}</span>
           <span aria-hidden="true" className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
         </a>
       </section>
@@ -43,19 +46,19 @@ const Sounds: React.FC = () => {
         <button
           onClick={() => setActiveTab('soundscapes')}
           className={`px-6 py-4 font-black uppercase tracking-[0.15em] text-[11px] transition-all border-b-2 -mb-[2px] ${activeTab === 'soundscapes'
-              ? 'text-neonGreen border-neonGreen'
-              : 'text-contentDark/40 dark:text-white/40 border-transparent hover:text-contentDark dark:hover:text-white'
+            ? 'text-neonGreen border-neonGreen'
+            : 'text-contentDark/40 dark:text-white/40 border-transparent hover:text-contentDark dark:hover:text-white'
             }`}
         >
           <span className="mr-2">🎙️</span>
-          Paisajes Sonoros
+          {t('sounds.tabs.soundscapes')}
           <span className="ml-2 text-[9px] opacity-60">({soundscapes.length})</span>
         </button>
         <button
           onClick={() => setActiveTab('soundcloud')}
           className={`px-6 py-4 font-black uppercase tracking-[0.15em] text-[11px] transition-all border-b-2 -mb-[2px] ${activeTab === 'soundcloud'
-              ? 'text-neonPink border-neonPink'
-              : 'text-contentDark/40 dark:text-white/40 border-transparent hover:text-contentDark dark:hover:text-white'
+            ? 'text-neonPink border-neonPink'
+            : 'text-contentDark/40 dark:text-white/40 border-transparent hover:text-contentDark dark:hover:text-white'
             }`}
         >
           <span className="mr-2">☁️</span>

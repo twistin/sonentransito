@@ -1,0 +1,72 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre min",
+        "research": "Investigación",
+        "sounds": "Sons",
+        "gallery": "Galería"
+    },
+    "home": {
+        "subtitle": "Laboratorio sonoro",
+        "title": "Son en Tránsito",
+        "description": "Exploracións sonoras entre o algoritmo e o orgánico. Paisaxes sonoras, live coding e música experimental desde Galicia.",
+        "cta": {
+            "listen": "Escoitar paisaxe",
+            "explore": "Explorar"
+        },
+        "sections": {
+            "soundscapes": "Paisaxes Sonoras",
+            "soundscapesDesc": "Capturas binaurais de lugares en tránsito",
+            "research": "Investigación",
+            "researchDesc": "Artigos e reflexións académicas",
+            "sounds": "Sons",
+            "soundsDesc": "Producións e experimentos sonoros"
+        }
+    },
+    "about": {
+        "subtitle": "Ethos & Perfil",
+        "location": "Ponteareas, Pontevedra",
+        "focusTitle": "Áreas de Enfoque",
+        "trajectoryTitle": "Traxectoria",
+        "projectsTitle": "Proxectos Web",
+        "collaborate": "Colaboramos?",
+        "manifesto": "Xerar Manifesto Efémero",
+        "loading": "Sincronizando..."
+    },
+    "research": {
+        "subtitle": "Investigación Académica",
+        "title": "Logos",
+        "viewAcademia": "Ver en Academia",
+        "poeticInterpretation": "Interpretación Poética IA",
+        "decoding": "Decodificando..."
+    },
+    "sounds": {
+        "subtitle": "Laboratorio sonoro",
+        "title": "Sons",
+        "description": "Explora o arquivo sonoro: desde paisaxes sonoras capturadas en campo ata producións publicadas en SoundCloud.",
+        "visitSoundcloud": "Visitar SoundCloud",
+        "tabs": {
+            "soundscapes": "Paisaxes Sonoras",
+            "soundcloud": "SoundCloud"
+        },
+        "noSoundscapes": "Aínda non hai paisaxes sonoras publicadas.",
+        "noSoundcloud": "Aínda non hai tracks de SoundCloud.",
+        "upcoming": "Proximamente"
+    },
+    "gallery": {
+        "subtitle": "Arquivo Visual",
+        "title": "Galería",
+        "filter": {
+            "all": "Todas",
+            "bySeries": "Por serie"
+        }
+    },
+    "footer": {
+        "copyright": "SON EN TRANSITO | SONIDO • ESPAZO • MATERIA"
+    },
+    "common": {
+        "fieldRecording": "Gravación de campo",
+        "readMore": "Ler máis",
+        "close": "Pechar"
+    }
+}

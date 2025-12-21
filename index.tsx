@@ -1,6 +1,9 @@
 // Polyfills MUST be imported first before any other imports
 import './polyfills';
 
+// i18n configuration - must be imported before App
+import './i18n';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -16,3 +19,4 @@ root.render(
     <App />
   </React.StrictMode>
 );
+

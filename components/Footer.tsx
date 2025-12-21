@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Social media links
 const socialLinks = [
@@ -13,9 +14,11 @@ const socialLinks = [
 ];
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-center text-[9px] tracking-[0.4em] text-contentDark/30 dark:text-white/30 uppercase border-t border-black/5 dark:border-white/5 bg-white dark:bg-darkBg transition-all duration-500">
-      <div>© 2024 SON EN TRANSITO | SONIDO • ESPACIO • MATERIA</div>
+      <div>© 2024 {t('footer.copyright')}</div>
       <div className="mt-6 md:mt-0 flex flex-wrap justify-center gap-6 md:gap-8">
         {socialLinks.map((link) => (
           <a
@@ -34,4 +37,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
