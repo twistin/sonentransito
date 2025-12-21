@@ -2,27 +2,32 @@ import { ResearchPaper, Profile } from './types';
 
 export const PROFILE_DATA: Profile = {
   name: "Silvino Díaz Carreras",
-  role: "Investigador Doctoral & Artista Sonoro",
-  bio: "Mi práctica se sitúa en la intersección de la fenomenología del sonido, los estudios de migración y la creación algorítmica. Exploro cómo el tiempo kairológico y los espacios liminales configuran nuestra percepción de la realidad. A través de la captura binaural y la síntesis granular, busco traducir lo inefable en experiencias sonoras que inviten a la revelación y al tránsito consciente.",
+  role: "Guitarrista · Musicólogo · Creador de herramientas educativas",
+  bio: "Llevo más de cuatro décadas con la guitarra entre las manos y 26 años enseñando en el Conservatorio de Ponteareas. Mi día a día mezcla la docencia —Historia de la Música, Nuevas Tecnologías, Guitarra— con la investigación y la programación creativa. Me apasiona explorar cómo el sonido, la tecnología y la identidad se entrelazan. Actualmente compagino las clases con mi proyecto de Live Coding, la composición algorítmica y el desarrollo de aplicaciones educativas. Creo que la música es un espacio de exploración, pensamiento crítico y creación constante.",
   focus: [
-    "identidad",
-    "música y migración",
-    "Escenas musicales",
-    "Música algoritmica",
-    "Live Coding",
-    "IA",
-    "EdTech",
-    "Tecnología"
+    "Live Coding & SuperCollider",
+    "Composición algorítmica",
+    "Escenas musicales e identidad",
+    "Desarrollo de apps educativas",
+    "Musicología & Etnomusicología",
+    "Guitarra clásica y eléctrica",
+    "IA aplicada a la música",
+    "Pedagogía musical"
   ],
   education: [
     {
       degree: "Doctorando en Música e Identidad",
-      institution: "UNED · Línea: Comunidades Migrantes · Título: 'Cantando en tierra ajena'",
+      institution: "UNED · 'Cantando en tierra ajena' - Comunidades Migrantes",
       year: "En curso"
     },
     {
+      degree: "26 años de docencia",
+      institution: "Conservatorio Profesional Reveriano Soutullo · Ponteareas",
+      year: "Activo"
+    },
+    {
       degree: "Diploma de Estudios Avanzados (DEA)",
-      institution: "Programa: Música en la España Contemporánea",
+      institution: "Música en la España Contemporánea",
       year: "Postgrado"
     },
     {
@@ -31,12 +36,13 @@ export const PROFILE_DATA: Profile = {
       year: "Licenciatura"
     },
     {
-      degree: "Profesor Superior de Música",
+      degree: "Profesor Superior de Música (Guitarra)",
       institution: "Conservatorio Superior de Música",
       year: "Título Superior"
     }
   ]
 };
+
 
 export const RESEARCH_DATA: ResearchPaper[] = [
   {
